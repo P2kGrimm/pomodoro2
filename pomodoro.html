@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="styles_pomodoro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pomodoro</h1>
+    <button id="alternar-tema"><i class="fas fa-moon"></i>Alternar Modo Escuro</button>
+    <div class="timer">
+      <span id="minutos">25</span>:<span id="segundos">00</span>
+    </div>
+    <div class="controles">
+      <button id="iniciar"><i class="fas fa-play"></i>Iniciar</button>
+      <button id="pausar"><i class="fas fa-pause"></i>Pausar</button>
+      <button id="reiniciar"><i class="fas fa-redo-alt"></i>Reiniciar</button>
+    </div>
+    <div class="configuracoes">
+      <label>Tempo de Trabalho:</label>
+      <input type="number" id="tempoTrabalho" value="25" min="1" max="60"> minutos
+      <label>Tempo de Pausa:</label>
+      <input type="number" id="tempoPausa" value="5" min="1" max="30"> minutos
+    </div>
+    <div class="historico-sessoes">
+      <p>Sessões Concluídas: <span id="contadorSessoes">0</span></p>
+    </div>
+    <audio id="notificacao-som" src="som_notificacao.mp3"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

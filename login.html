@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PomodoroPro</title>
+  <link rel="stylesheet" href="styles_login.css">
+</head>
+<body>
+  <div class="container login-container">
+    <h1>PomodoroPro</h1>
+    <form id="formLogin">
+      <input type="text" id="nome" placeholder="Nome de Usuário" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit" class="login-button">Entrar</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const senha = document.getElementById('senha').value;
+      const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+      if (usuario && usuario.nome === nome && usuario.senha === senha) {
+        alert('Login bem-sucedido!');
+        window.location.href = "pomodoro.html";
+      } else {
+        alert('Usuário ou senha inválidos!');
+      }
+    });
+  </script>
+</body>
+</html>

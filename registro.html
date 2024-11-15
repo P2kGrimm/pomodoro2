@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - PomodoroPro</title>
+  <link rel="stylesheet" href="styles_register.css">
+</head>
+<body>
+  <div class="container register-container">
+    <h1>Registro</h1>
+    <form id="formRegistro">
+      <input type="text" id="nome" placeholder="Nome de Usuário" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit" class="register-button">Registrar</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('formRegistro').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const senha = document.getElementById('senha').value;
+      localStorage.setItem('usuario', JSON.stringify({ nome, senha }));
+      alert('Registrado com sucesso!');
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
