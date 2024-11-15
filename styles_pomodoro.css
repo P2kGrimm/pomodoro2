@@ -1,0 +1,115 @@
+/* styles_pomodoro.css */
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+  max-width: 350px;
+  width: 100%;
+}
+
+body.dark-mode .container {
+  background-color: #34495e;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2ecc71;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#alternar-tema {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 5px auto 10px auto;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#alternar-tema i {
+  margin-right: 5px;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2ecc71;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.controles button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+#iniciar {
+  background-color: #27ae60;
+  color: white;
+}
+
+#pausar {
+  background-color: #f39c12;
+  color: white;
+}
+
+#reiniciar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.configuracoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.historico-sessoes p {
+  font-size: 1rem;
+}
