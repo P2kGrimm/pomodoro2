@@ -1,8 +1,4 @@
-# Ignora a pasta de módulos do Node.js
 node_modules/
-
-# Ignora o banco de dados SQLite
-pomodoro-app/database.sqlite
-
-# Ignora o arquivo de ambiente (caso exista)
+pomodoro-app/
+som_notificacao.mp3
 .env
